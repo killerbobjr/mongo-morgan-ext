@@ -10,6 +10,8 @@ function StructuredLogging() {
             'method': tokens.method(req, res), //2
             'Remote-user': tokens['remote-user'](req, res), //3
             'Remote-address': tokens['remote-addr'](req, res), //4
+            'server': tokens['server'](req, res), //4
+            'port': tokens['port'](req, res), //4
             'URL': tokens.url(req, res), //5
             'HTTPversion': 'HTTP/' + tokens['http-version'](req, res), //6
             'Response-time': tokens['response-time'](req, res, 'digits'), //7
@@ -132,7 +134,7 @@ return HTTPlogger(db, StructuredLogging(), {
 }
 
 module.exports = mongoMorganExtendedFormat;
-
+module.exports.morgan = HTTPlogger;
 
 
 
