@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/serganus/mongo-morgan-ext#readme",
   "dependencies": {
-    "mongo-morgan": "git://github.com/killerbobjr/mongo-morgan",
+    "mongo-morgan": "https://github.com/killerbobjr/mongo-morgan",
     "rid": "0.0.1"
   }
 }
